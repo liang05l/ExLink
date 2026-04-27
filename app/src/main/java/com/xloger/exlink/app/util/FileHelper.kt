@@ -15,11 +15,15 @@ object FileHelper {
 
     fun getJsonPath() : String {
         val sdPath = "/sdcard"
-        val dir = File(sdPath, "Documents")
-        if (!dir.exists()) {
-            dir.mkdir()
+        val documentsDir = File(sdPath, "Documents")
+        if (!documentsDir.exists()) {
+            documentsDir.mkdir()
         }
-        return dir.path + File.separator + "exlink.json"
+        val exLinkDir = File(documentsDir, "ExLink")
+        if (!exLinkDir.exists()) {
+            exLinkDir.mkdir()
+        }
+        return exLinkDir.path + File.separator + "exlink.json"
     }
 
     fun readFile(path: String = getJsonPath()): String {
