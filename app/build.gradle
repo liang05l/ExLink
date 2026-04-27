@@ -12,18 +12,18 @@ repositories {
 }
 
 android {
-    signingConfigs {
-        config {
+    //signingConfigs {
+        //config {
             //keyAlias 'xloger'
             //keyPassword KeyPassword
             //storeFile file('C:/Users/xloger/.android/XlogerAndroid.jks')
             //storePassword StorePassword            
-            storeFile file("keystore.jks") 
-            storePassword System.getenv("KEYSTORE_PASSWORD")
-            keyAlias System.getenv("KEY_ALIAS")
-            keyPassword System.getenv("KEY_PASSWORD")
-        }
-    }
+            //storeFile file("keystore.jks") 
+            //storePassword System.getenv("KEYSTORE_PASSWORD")
+            //keyAlias System.getenv("KEY_ALIAS")
+            //keyPassword System.getenv("KEY_PASSWORD")
+        //}
+    //}
     compileSdkVersion 26
     defaultConfig {
         applicationId "com.xloger.exlink.app"
